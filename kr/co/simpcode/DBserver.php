@@ -12,8 +12,10 @@
     if($dontshowerror == true){
       $output = "데이터베이스 서버에 문제가 생긴것 같습니다. 관리자에게 문의해주세요";
     }else{
-    $output = "비정상적작동! ".$e->getMessage();
+    $output = "데이터베이스 서버에 연결을 할 수 없습니다! <br>오류메시지: ".$e->getMessage()."<br>오류파일: ".$e->getFile()."<br>오류가 발생한 줄: ".$e->getLine();
   }
   }
 }
+  echo $output;
+  }
 ?>
